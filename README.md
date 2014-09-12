@@ -29,6 +29,18 @@ git clone git://github.com/hl85/catsup-theme-puresam.git
 mv catsup-theme-puresam puresam
 ```
 
+The cool way using git submodule:
+```bash
+cd /path/to/your/blog
+mkdir themes
+mkdir themes/puresam
+git submodule add git@github.com:hl85/catsup-theme-puresam.git themes/puresam
+git add .
+git commit -m "Add submodule puresam"
+git submodule init
+git push
+```
+
 Configuration
 --------------
 Edit your configuration file, change `theme.name` to `puresam`
