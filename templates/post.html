@@ -15,7 +15,7 @@
     <article class="post">
         <header class="post-header">
             <img class="post-avatar" alt="author's avatar" src="{{static_url("image/avatar.jpg")}}" height="48" width="48">
-            <h2 class="post-title"><a href="{{ url_for(post) }}">{{ post.title }}</a></h2>
+            <h2 class="post-title">{{ post.title }}</h2>
             <p class="post-meta">
             <!-- By <a href="#" class="post-author">{{post.author}}</a>  -->on <span class="time-stamp">{{ post.date }}</span>
         {% if post.tags %} under
