@@ -6,15 +6,26 @@
     {% block head %}{% endblock %}
     <title>{% block title %}{{ site.name }}{% endblock %}</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" type="text/css" />
+<!--[if lte IE 8]> 
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+<!--<![endif]-->
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="/combo/1.17.4?/css/layouts/blog-old-ie.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
     <link rel="stylesheet" href="{{ static_url("css/style.css") }}" type="text/css" />
+<!--<![endif]-->
     <link rel="stylesheet" href="{{ static_url("css/pygments_style.css") }}" type="text/css" />
     <link rel="alternate" type="application/rss+xml" href="{{ url_for('feed') }}" title="{{ site.name }}" />
     <link rel="shortcut icon" href="{{ static_url("favicon.ico") }}" />
 </head>
 <body>
-<div class="pure-g-r" id="layout">
+<div class="pure-g" id="layout">
 
-<div class="sidebar pure-u">
+<div class="sidebar pure-u-1 pure-u-md-1-4">
     <header class="header">
         <hgroup>
             <h1 class="brand-title"><a href="{{ url_for('index') }}">{{ site.name }}</a></h1>
@@ -39,7 +50,7 @@
     </header>
 </div>
 
-<div class="content">
+<div class="content pure-u-1 pure-u-md-3-4">
     {% block content %}
     {% endblock %}
    <footer class="footer">
@@ -74,7 +85,7 @@
 
 <script type="text/javascript">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F88ad466865ee70215586d741da736f7f' type='text/javascript'%3E%3C/script%3E"));</script>
-ß</div>
+</div>
 </body>
 </html>
 
