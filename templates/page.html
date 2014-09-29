@@ -28,8 +28,8 @@
 {% endif %}
 {% if pagination.total > 1 %}
 {% for pageIndex in range(0,pagination.total) %}
-{% if pageination.page == (pageIndex+1) %}<span class="page_nav">{{pageination.page}}</span>
-{% else %}<a class="page_nav" href="{{pageination.get_permalink(pageIndex+1)}}">{{pageIndex+1}}</a>
+{% if pagination.page == (pageIndex+1) %}<span class="page_nav">{{pagination.page}}</span>
+{% else %}<a class="page_nav" href="{{pagination.get_permalink(pageIndex+1)}}">{{pageIndex+1}}</a>
 {% endif %}
 {% endfor %}
 {% endif %}
