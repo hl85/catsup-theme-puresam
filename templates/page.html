@@ -27,7 +27,7 @@
 <a href="{{ pagination.prev_permalink }}" class="page_nav" >Previous</a>
 {% endif %}
 {% if pagination.pages > 1 %}
-{% for pageno in range(1,pagination.pages) %}
+{% for pageno in range(1,pagination.pages+1) %}
 {% if pagination.page == pageno %}<span class="page_nav">{{pagination.page}}</span>
 {% else %}<a class="page_nav" href="{{pagination.get_permalink(pageno)}}">{{pageno}}</a>
 {% endif %}
